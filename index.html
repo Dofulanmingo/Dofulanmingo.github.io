@@ -172,7 +172,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <h2 id="第一章：初次用hexo框架搭建个人博客"><a href="#第一章：初次用hexo框架搭建个人博客" class="headerlink" title="第一章：初次用hexo框架搭建个人博客"></a>第一章：初次用hexo框架搭建个人博客</h2><p>初学者出现问题的话，网上的请求方案比较多成熟<br>windows和mac os 操作大差不差</p>
+<hr>
+<h3 id="1-先下载node-js-nodejs-org-10-5-1LTS长期版-一键式安装"><a href="#1-先下载node-js-nodejs-org-10-5-1LTS长期版-一键式安装" class="headerlink" title="1.先下载node.js(nodejs.org)10.5.1LTS长期版,一键式安装"></a>1.先下载node.js(nodejs.org)10.5.1LTS长期版,一键式安装</h3><p>打开终端cmd或item<br>通过node -v,npm -v查看<br>安装nodejs完成（因hexo需要nodejs来支持生成的）</p>
+<p>接下来真正安装hexo博客框架<br>安装之前，要借助npm这个包管理器来安装，由于国内的镜像源速度慢，so通过淘宝的cnpm来安装<br>命令：npm install -g cnpm –registry-<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>(g 为全局安装,registry镜像源指向淘宝)<br>安装好后通过敲cnpm自动补全，说明这个工具有了，亦可cnpm -v</p>
+<hr>
+<h3 id="2-有了cnpm后，真正全局安装hexo"><a href="#2-有了cnpm后，真正全局安装hexo" class="headerlink" title="2.有了cnpm后，真正全局安装hexo"></a>2.有了cnpm后，真正全局安装hexo</h3><p>命令：cnpm install -g hexo-cli<br>安装好后用hexo -v验证下（hexo基于node的）</p>
+<hr>
+<h3 id="3-开始使用hexo，搭建"><a href="#3-开始使用hexo，搭建" class="headerlink" title="3.开始使用hexo，搭建"></a>3.开始使用hexo，搭建</h3><h4 id="3-1-初始化"><a href="#3-1-初始化" class="headerlink" title="3.1 初始化"></a>3.1 初始化</h4><p>先建空文件夹blog，路径：C:\Users\28473\blog<br>所有博客的东西都生成在blog文件中<br>之后真正生成博客<br>mac用sudo hexo init，windows用管理员模式CMD：hexo init<br>初始化<br>这里安装已经完成了</p>
+<h4 id="3-2-这一步我出错了，没有安装git，"><a href="#3-2-这一步我出错了，没有安装git，" class="headerlink" title="3.2 这一步我出错了，没有安装git，"></a>3.2 这一步我出错了，没有安装git，</h4><p>{（去官网：<a href="https://git-scm.com/download/win）" target="_blank" rel="noopener">https://git-scm.com/download/win）</a><br>可复制下载链接用迅雷<br>之后设置一下：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496</a><br>参看廖雪峰光网git安装教程，在Windows上使用Git，可以从Git官网直接下载安装程序，（网速慢的同学请移步国内镜像），然后按默认选项安装即可。<br>安装完成后，在开始菜单里找到“Git”-&gt;“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！<br>安装完成后，还需要最后一步设置，在命令行输入：<br>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:email@example.com" target="_blank" rel="noopener">email@example.com</a>“<br>（这里改成你github上的用户名和邮箱名）</p>
+<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。你也许会担心，如果有人故意冒充别人怎么办？这个不必担心，首先我们相信大家都是善良无知的群众，其次，真的有冒充的也是有办法可查的。<br>注意git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。}</p>
+<h4 id="3-3-初始化后启动"><a href="#3-3-初始化后启动" class="headerlink" title="3.3 初始化后启动"></a>3.3 初始化后启动</h4><p>启动（start）：<br>通过命令：hexo s<br><a href="http://localhost:4000,浏览器访问下，默认创建了一篇博文" target="_blank" rel="noopener">http://localhost:4000,浏览器访问下，默认创建了一篇博文</a><br>hexo s （start，server）平常用来与预览用的，写博客时候</p>
+<h4 id="3-4-新写文章"><a href="#3-4-新写文章" class="headerlink" title="3.4 新写文章"></a>3.4 新写文章</h4><p>新建，新写一篇文章<br>命令：hexo n “文章名字”<br>运行后会create生成.md 文件<br>可在命令中打开，或用编辑器，vscode，vim，我用的sublimetext3<br>写好之后，保存</p>
+<p>再hexo clean（清理一下）<br>hexo g (generater生成一下)</p>
+<p>再重新启动一下<br>hexo s(4000端口)</p>
+<p>hexo博客搭建已经完成（本地）</p>
+<hr>
+<h3 id="4-部署到远端（github上）"><a href="#4-部署到远端（github上）" class="headerlink" title="4.部署到远端（github上）"></a>4.部署到远端（github上）</h3><p>接下来部署到远端（github上）去</p>
+<h4 id="4-1-新建仓库"><a href="#4-1-新建仓库" class="headerlink" title="4.1 新建仓库"></a>4.1 新建仓库</h4><p>登录github新建仓库create a new repository<br>Repository name 填写 用户名.github.io<br>Description:我的hexo博客（for example）<br>create 完成，此时空仓库</p>
+<h4 id="4-2-下载git部署插件"><a href="#4-2-下载git部署插件" class="headerlink" title="4.2 下载git部署插件"></a>4.2 下载git部署插件</h4><p>之后在建的blog目录下装一个git部署插件<br>cnpm install –save hexo-deployer-git</p>
+<p>之后设置文件：对-config.yml进行编辑配置（文件打开里面最下面的deploy），<br>type: git<br>repo: 仓库地址<br>branch: master</p>
+<p>保存</p>
+<p>部署命令：（deploy）<br>hexo d</p>
+<p>这时候刷新github，就有东西了</p>
+<p>再浏览器刷新一下新地址，以后就不需要local了</p>
+<p>操作都是基于本地的blog（路径）来操作的，</p>
+<hr>
+<h3 id="5-换主题："><a href="#5-换主题：" class="headerlink" title="5. 换主题："></a>5. 换主题：</h3><p>找到别人github上好的theme，知道链接</p>
+<h4 id="5-1-下主题"><a href="#5-1-下主题" class="headerlink" title="5.1 下主题"></a>5.1 下主题</h4><p>命令（克隆）:<br>git clone <a href="https://github.com/litten/hero-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hero-theme-yilia.git</a> themes/yilia<br>会往thems/yilia目录下克隆</p>
+<h4 id="5-2-配到我自己的博客"><a href="#5-2-配到我自己的博客" class="headerlink" title="5.2 配到我自己的博客"></a>5.2 配到我自己的博客</h4><p>还是修改-config.yml文件<br>找到theme： landscape（默认）<br>改成theme: yilia</p>
+<p>hexo clean(清理)<br>hexo g（generater生成）<br>hexo s（start，server下）<br>得到4000端口<br>后面一样，部署到远端<br>hexo d</p>
 <hr>
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
 <hr>
